@@ -56,8 +56,17 @@
             justify-content: center;
         }
 
+        .social-links {
+            margin-top: 30px;
+        }
+
+        .social-links p {
+            margin-bottom: 10px;
+        }
+
         .social-links a {
-            margin: 0 10px;
+            display: inline-block;
+            margin: 10px;
             text-decoration: none;
             color: #333;
             font-size: 1.5em;
@@ -68,51 +77,52 @@
         }
 
         /* Mobile Responsive Styles */
-        @media (max-width: 768px) {
-            .logo {
-                margin-top: 10px; /* Add space on top for mobile */
-            }
-            .countdown-container {
-                flex-direction: column;
-                margin-top: 10px;
-            }
+        /* Mobile Responsive Styles */
+@media (max-width: 768px) {
+    .logo {
+        margin-top: 0; /* Reduced top margin */
+    }
+    .countdown-container {
+        flex-direction: column;
+        margin-top: 10px;
+    }
 
-            h1 {
-                font-size: 3em;
-            }
+    h1 {
+        font-size: 3em;
+    }
 
-            .countdown {
-                font-size: 1.5em;
-                margin-top: 10px;
-            }
+    .countdown {
+        font-size: 1.5em;
+        margin-top: 10px;
+    }
 
-            p {
-                font-size: 1em;
-                margin-bottom: 20px;
-            }
+    p {
+        font-size: 1em;
+        margin-bottom: 20px;
+    }
 
-            .social-links a {
-                font-size: 1.2em;
-            }
-        }
+    .social-links a {
+        font-size: 1.2em;
+    }
+}
 
-        /* Small Mobile Styles */
-        @media (max-width: 480px) {
-            .logo {
-                margin-top: 10px; /* Ensure the logo stays at the top with some space */
-            }
-            h1 {
-                font-size: 2.5em;
-            }
+/* Small Mobile Styles */
+@media (max-width: 480px) {
+    .logo {
+        margin-top: 0; /* Reduced top margin */
+    }
+    h1 {
+        font-size: 2.5em;
+    }
 
-            .countdown {
-                font-size: 1.2em;
-            }
+    .countdown {
+        font-size: 1.2em;
+    }
 
-            .social-links a {
-                font-size: 1em;
-            }
-        }
+    .social-links a {
+        font-size: 1em;
+    }
+}
     </style>
 </head>
 <body>
