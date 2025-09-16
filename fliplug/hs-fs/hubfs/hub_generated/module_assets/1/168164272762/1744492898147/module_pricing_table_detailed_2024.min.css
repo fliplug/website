@@ -1,0 +1,131 @@
+span.dt-price-title {
+  display: block;
+  font-size: 20px;
+  color: #100C27;
+  margin-bottom: 8px;
+}
+span.dt-price {
+  display: block;
+  font-size: 20px;
+  font-weight: 300;
+  color: #606387;
+  margin-bottom: 10px;
+}
+a.button.dt-btn {
+  display: block;
+  border-radius: 8px;
+  background: none;
+  border: 2px solid #D9DAE9;
+  font-size: 18px;
+}
+a.button.dt-btn:hover {
+  background: #110c27;
+  border: 2px solid #110c27;
+  color: #fff;
+}
+.pricing-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed; /* Ensures the table layout is fixed */
+}
+
+.pricing-table th,
+.pricing-table td {
+  border: none;
+  padding: 12px;
+  text-align: center;
+  width: 25%; /* Set fixed width for all columns */
+}
+.pricing-table th:nth-child(3) {
+  border-top-left-radius: 14px;
+  border-top-right-radius: 14px;
+}
+.pricing-table th:nth-child(3),
+.pricing-table td:nth-child(3) {
+  background-color: #F7F8FA;
+}
+
+.accordion {
+  text-align: left;
+  overflow: hidden; /* Prevents content from overflowing the cell */
+}
+
+.accordion-button {
+  background-color: #ffffff;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  text-align: left;
+  width: 100%;
+  outline: none;
+  font-size: 15px;
+  font-weight: 400;
+  color: #110c27;
+  position: relative;
+  /*white-space: nowrap; /* Prevents text from wrapping */
+  /*overflow: hidden; /* Ensures text doesn't overflow */
+  /*text-overflow: ellipsis; /* Adds ellipsis for overflowed text */
+}
+.accordion-button:hover {
+  background: #fff;
+  border-color: #fff;
+}
+.accordion-button:after {
+  content: '\003C'; /* Unicode character for "less-than" sign (<) */
+  font-size: 13px;
+  position: absolute;
+  right: 10px;
+  transition: transform 0.3s ease;
+}
+
+.accordion-button.active:after {
+  transform: rotate(-90deg); /* Rotate down */
+}
+.accordion-button:focus {
+  border: none;
+  outline: none !important;
+  background: #fff;
+}
+.accordion-content {
+  display: none;
+  padding: 10px;
+  width: 100%; /* Ensures content width matches the cell */
+  box-sizing: border-box; /* Includes padding in the element's total width */
+}
+.accordion-content p {
+  font-size: 13px;
+}
+
+/* CSS for responsive table */
+@media (max-width: 650px) {
+  .pricing-table th {
+    display: none;
+  }
+  .pricing-table tbody,
+  .pricing-table tr,
+  .pricing-table td {
+    display: block;
+    width: 100%;
+  }
+  .pricing-table td {
+    padding: 10px 0;
+  }
+  .pricing-table td::before {
+    content: attr(data-title);
+    display: inline-block;
+    width: 60%;
+    text-align: left;
+  }
+  .pricing-table tbody tr {
+    border-bottom: 1px solid #ddd;
+  }
+  .accordion-button {
+    display: inline-block;
+    vertical-align: top;
+    text-align: left;
+  }
+  .dt-price-title, .dt-price, .dt-btn {
+    display: inline-block;
+    width: 50%;
+  }
+}
