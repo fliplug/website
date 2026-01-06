@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fraud Detection - Fliplug</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="icon" type="image/svg+xml" href="logo.svg">
+    <link rel="apple-touch-icon" href="favicon.png">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <a href="index.html">
+                    <img src="logo.svg" alt="Fliplug" class="logo-img">
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="customer-portal.html">Customer Portal</a></li>
+                <li><a href="fraud-detection.html" class="active">Fraud Detection</a></li>
+                <li><a href="payment-gateway.html">Payment Gateway</a></li>
+                <li><a href="identity-verification.html">Identity Verification</a></li>
+                <li><a href="#" class="btn-primary">Get Started</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Advanced Fraud Detection</h1>
+            <p>Protect your business with AI-powered fraud detection and prevention</p>
+        </div>
+    </section>
+
+    <!-- Hero Features -->
+    <section class="service-hero">
+        <div class="container">
+            <div class="hero-features">
+                <div class="hero-feature">
+                    <i class="fas fa-brain"></i>
+                    <h3>AI-Powered</h3>
+                    <p>Machine learning algorithms that learn and adapt</p>
+                </div>
+                <div class="hero-feature">
+                    <i class="fas fa-bolt"></i>
+                    <h3>Real-Time</h3>
+                    <p>Instant fraud detection in milliseconds</p>
+                </div>
+                <div class="hero-feature">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>99.9% Accuracy</h3>
+                    <p>Industry-leading fraud detection rates</p>
+                </div>
+                <div class="hero-feature">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Enterprise Security</h3>
+                    <p>Bank-level encryption and security</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="service-features">
+        <div class="container">
+            <div class="section-header">
+                <h2>Comprehensive Fraud Protection</h2>
+                <p>Multi-layered defense against fraudulent activities</p>
+            </div>
+            <div class="features-list">
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-credit-card"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h3>Payment Fraud Detection</h3>
+                        <p>Detect and prevent fraudulent payment transactions using advanced pattern recognition and behavioral analysis. Our system analyzes transaction patterns, velocity, and risk factors in real-time.</p>
+                        <ul>
+                            <li>Card testing detection</li>
+                            <li>Stolen card identification</li>
+                            <li>Chargeback prevention</li>
+                            <li>Velocity checks</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-user-ninja"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h3>Identity Fraud Prevention</h3>
+                        <p>Comprehensive identity verification to prevent account takeover, synthetic identity fraud, and identity theft. Cross-reference multiple data points for accurate verification.</p>
+                        <ul>
+                            <li>Synthetic identity detection</li>
+                            <li>Account takeover prevention</li>
+                            <li>Identity document verification</li>
+                            <li>Biometric authentication</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h3>Device Fingerprinting</h3>
+                        <p>Track and identify devices to detect suspicious activity patterns. Our device fingerprinting technology creates unique identifiers for each device.</p>
+                        <ul>
+                            <li>Device recognition</li>
+                            <li>Browser fingerprinting</li>
+                            <li>IP geolocation</li>
+                            <li>Proxy/VPN detection</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h3>Behavioral Analytics</h3>
+                        <p>Analyze user behavior patterns to identify anomalies and suspicious activities. Machine learning models continuously learn from transaction data.</p>
+                        <ul>
+                            <li>Behavioral pattern analysis</li>
+                            <li>Anomaly detection</li>
+                            <li>Risk scoring</li>
+                            <li>Adaptive learning</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Demo Section -->
+    <section class="demo-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Try Our Fraud Detection</h2>
+                <p>Test our fraud detection system with sample data</p>
+            </div>
+            <div class="demo-container">
+                <div class="demo-form">
+                    <h3>Transaction Analysis</h3>
+                    <form id="fraud-demo-form">
+                        <div class="form-group">
+                            <label>Transaction Amount</label>
+                            <input type="number" id="txn-amount" placeholder="Enter amount" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Card Number (Last 4 digits)</label>
+                            <input type="text" id="card-last4" placeholder="1234" maxlength="4" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label>IP Address</label>
+                            <input type="text" id="ip-address" placeholder="192.168.1.1" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Country</label>
+                            <select id="country" class="form-control" required>
+                                <option value="">Select country</option>
+                                <option value="US">United States</option>
+                                <option value="CA">Canada</option>
+                                <option value="GB">United Kingdom</option>
+                                <option value="DE">Germany</option>
+                                <option value="FR">France</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-large">
+                            <i class="fas fa-search"></i> Analyze Transaction
+                        </button>
+                    </form>
+                </div>
+                <div class="demo-result" id="fraud-result">
+                    <div class="result-placeholder">
+                        <i class="fas fa-shield-alt"></i>
+                        <p>Submit a transaction to see fraud analysis results</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-box">
+                    <div class="stat-number">99.9%</div>
+                    <div class="stat-label">Detection Accuracy</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number">&lt;50ms</div>
+                    <div class="stat-label">Response Time</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number">$2.5B</div>
+                    <div class="stat-label">Fraud Prevented</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number">10M+</div>
+                    <div class="stat-label">Transactions Analyzed</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Integration -->
+    <section class="integration-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Easy Integration</h2>
+                <p>Get started in minutes with our simple API</p>
+            </div>
+            <div class="code-example">
+                <div class="code-header">
+                    <span>JavaScript Example</span>
+                    <button class="btn-copy"><i class="fas fa-copy"></i></button>
+                </div>
+                <pre><code>// Initialize fraud detection
+const fraudDetector = new FliplugFraud({
+  apiKey: 'your-api-key',
+  environment: 'production'
+});
+
+// Analyze transaction
+const result = await fraudDetector.analyze({
+  amount: 100.00,
+  cardLast4: '4242',
+  ipAddress: '192.168.1.1',
+  country: 'US'
+});
+
+// Check result
+if (result.riskScore > 0.7) {
+  // High risk - block transaction
+  console.log('Fraud detected!');
+} else {
+  // Low risk - proceed
+  console.log('Transaction approved');
+}</code></pre>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Protect Your Business?</h2>
+                <p>Start using our fraud detection service today</p>
+                <a href="customer-portal.html" class="btn btn-primary btn-large">
+                    <i class="fas fa-arrow-right"></i> Get Started
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2024 Fliplug. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

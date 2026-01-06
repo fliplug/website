@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Identity Verification - Fliplug</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="icon" type="image/svg+xml" href="logo.svg">
+    <link rel="apple-touch-icon" href="favicon.png">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <a href="index.html">
+                    <img src="logo.svg" alt="Fliplug" class="logo-img">
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="customer-portal.html">Customer Portal</a></li>
+                <li><a href="fraud-detection.html">Fraud Detection</a></li>
+                <li><a href="payment-gateway.html">Payment Gateway</a></li>
+                <li><a href="identity-verification.html" class="active">Identity Verification</a></li>
+                <li><a href="#" class="btn-primary">Get Started</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Identity Verification Services</h1>
+            <p>Comprehensive identity verification for address, email, phone, and SSN validation</p>
+        </div>
+    </section>
+
+    <!-- Verification Types -->
+    <section class="verification-types-section">
+        <div class="container">
+            <div class="verification-tabs">
+                <button class="verification-tab active" data-tab="email">
+                    <i class="fas fa-envelope"></i>
+                    <span>Email Verification</span>
+                </button>
+                <button class="verification-tab" data-tab="phone">
+                    <i class="fas fa-phone"></i>
+                    <span>Phone Verification</span>
+                </button>
+                <button class="verification-tab" data-tab="address">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Address Verification</span>
+                </button>
+                <button class="verification-tab" data-tab="ssn">
+                    <i class="fas fa-id-card"></i>
+                    <span>SSN Verification</span>
+                </button>
+            </div>
+
+            <!-- Email Verification -->
+            <div class="verification-content active" id="email-verification">
+                <div class="verification-header">
+                    <h2>Email Verification</h2>
+                    <p>Verify email addresses in real-time to ensure deliverability and prevent fraud</p>
+                </div>
+                <div class="verification-demo">
+                    <div class="demo-form">
+                        <h3>Verify Email Address</h3>
+                        <form id="email-verify-form">
+                            <div class="form-group">
+                                <label>Email Address</label>
+                                <input type="email" id="email-input" placeholder="user@example.com" class="form-control" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-large">
+                                <i class="fas fa-search"></i> Verify Email
+                            </button>
+                        </form>
+                    </div>
+                    <div class="demo-info">
+                        <h4>What We Check</h4>
+                        <ul>
+                            <li><i class="fas fa-check"></i> Syntax validation</li>
+                            <li><i class="fas fa-check"></i> Domain validation</li>
+                            <li><i class="fas fa-check"></i> MX record check</li>
+                            <li><i class="fas fa-check"></i> Disposable email detection</li>
+                            <li><i class="fas fa-check"></i> Role-based email detection</li>
+                            <li><i class="fas fa-check"></i> SMTP verification</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="verification-result" id="email-result"></div>
+            </div>
+
+            <!-- Phone Verification -->
+            <div class="verification-content" id="phone-verification">
+                <div class="verification-header">
+                    <h2>Phone Verification</h2>
+                    <p>Validate phone numbers and verify ownership through SMS or voice calls</p>
+                </div>
+                <div class="verification-demo">
+                    <div class="demo-form">
+                        <h3>Verify Phone Number</h3>
+                        <form id="phone-verify-form">
+                            <div class="form-group">
+                                <label>Phone Number</label>
+                                <input type="tel" id="phone-input" placeholder="+1 (555) 123-4567" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Verification Method</label>
+                                <select id="phone-method" class="form-control">
+                                    <option value="sms">SMS</option>
+                                    <option value="voice">Voice Call</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-large">
+                                <i class="fas fa-search"></i> Verify Phone
+                            </button>
+                        </form>
+                    </div>
+                    <div class="demo-info">
+                        <h4>What We Check</h4>
+                        <ul>
+                            <li><i class="fas fa-check"></i> Number format validation</li>
+                            <li><i class="fas fa-check"></i> Country code verification</li>
+                            <li><i class="fas fa-check"></i> Line type detection</li>
+                            <li><i class="fas fa-check"></i> Carrier information</li>
+                            <li><i class="fas fa-check"></i> Active number verification</li>
+                            <li><i class="fas fa-check"></i> Two-factor authentication</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="verification-result" id="phone-result"></div>
+            </div>
+
+            <!-- Address Verification -->
+            <div class="verification-content" id="address-verification">
+                <div class="verification-header">
+                    <h2>Address Verification</h2>
+                    <p>Validate and standardize addresses to ensure accuracy and deliverability</p>
+                </div>
+                <div class="verification-demo">
+                    <div class="demo-form">
+                        <h3>Verify Address</h3>
+                        <form id="address-verify-form">
+                            <div class="form-group">
+                                <label>Street Address</label>
+                                <input type="text" id="street-input" placeholder="123 Main St" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label>City</label>
+                                <input type="text" id="city-input" placeholder="New York" class="form-control" required>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label>State/Province</label>
+                                    <input type="text" id="state-input" placeholder="NY" class="form-control" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>ZIP/Postal Code</label>
+                                    <input type="text" id="zip-input" placeholder="10001" class="form-control" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Country</label>
+                                <select id="address-country" class="form-control" required>
+                                    <option value="US">United States</option>
+                                    <option value="CA">Canada</option>
+                                    <option value="GB">United Kingdom</option>
+                                    <option value="AU">Australia</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-large">
+                                <i class="fas fa-search"></i> Verify Address
+                            </button>
+                        </form>
+                    </div>
+                    <div class="demo-info">
+                        <h4>What We Check</h4>
+                        <ul>
+                            <li><i class="fas fa-check"></i> Address format validation</li>
+                            <li><i class="fas fa-check"></i> Postal code verification</li>
+                            <li><i class="fas fa-check"></i> Address standardization</li>
+                            <li><i class="fas fa-check"></i> Deliverability check</li>
+                            <li><i class="fas fa-check"></i> Geocoding</li>
+                            <li><i class="fas fa-check"></i> Address completeness</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="verification-result" id="address-result"></div>
+            </div>
+
+            <!-- SSN Verification -->
+            <div class="verification-content" id="ssn-verification">
+                <div class="verification-header">
+                    <h2>SSN Verification</h2>
+                    <p>Securely verify Social Security Numbers with bank-level encryption</p>
+                </div>
+                <div class="verification-demo">
+                    <div class="demo-form">
+                        <h3>Verify SSN</h3>
+                        <form id="ssn-verify-form">
+                            <div class="form-group">
+                                <label>Social Security Number</label>
+                                <input type="text" id="ssn-input" placeholder="XXX-XX-XXXX" class="form-control" maxlength="11" required>
+                                <small class="form-hint">Format: XXX-XX-XXXX</small>
+                            </div>
+                            <div class="form-group">
+                                <label>First Name</label>
+                                <input type="text" id="ssn-firstname" placeholder="John" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Last Name</label>
+                                <input type="text" id="ssn-lastname" placeholder="Doe" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Date of Birth</label>
+                                <input type="date" id="ssn-dob" class="form-control" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-large">
+                                <i class="fas fa-search"></i> Verify SSN
+                            </button>
+                        </form>
+                    </div>
+                    <div class="demo-info">
+                        <h4>Security & Compliance</h4>
+                        <ul>
+                            <li><i class="fas fa-check"></i> Bank-level encryption</li>
+                            <li><i class="fas fa-check"></i> PCI DSS compliant</li>
+                            <li><i class="fas fa-check"></i> SOC 2 certified</li>
+                            <li><i class="fas fa-check"></i> GDPR compliant</li>
+                            <li><i class="fas fa-check"></i> Real-time verification</li>
+                            <li><i class="fas fa-check"></i> Identity matching</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="verification-result" id="ssn-result"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="service-features">
+        <div class="container">
+            <div class="section-header">
+                <h2>Why Choose Our Verification Services</h2>
+                <p>Comprehensive, secure, and reliable identity verification</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3>Real-Time Verification</h3>
+                    <p>Get instant results with our real-time verification API</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Enterprise Security</h3>
+                    <p>Bank-level encryption and compliance with industry standards</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3>Global Coverage</h3>
+                    <p>Verify identities across 190+ countries worldwide</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>99.9% Accuracy</h3>
+                    <p>Industry-leading accuracy rates for all verification types</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Integration -->
+    <section class="integration-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Easy Integration</h2>
+                <p>Get started in minutes with our simple API</p>
+            </div>
+            <div class="code-example">
+                <div class="code-header">
+                    <span>JavaScript Example</span>
+                    <button class="btn-copy"><i class="fas fa-copy"></i></button>
+                </div>
+                <pre><code>// Initialize verification service
+const verifier = new FliplugVerification({
+  apiKey: 'your-api-key'
+});
+
+// Verify email
+const emailResult = await verifier.email.verify('user@example.com');
+console.log('Email valid:', emailResult.valid);
+
+// Verify phone
+const phoneResult = await verifier.phone.verify('+15551234567');
+console.log('Phone valid:', phoneResult.valid);
+
+// Verify address
+const addressResult = await verifier.address.verify({
+  street: '123 Main St',
+  city: 'New York',
+  state: 'NY',
+  zip: '10001',
+  country: 'US'
+});
+console.log('Address valid:', addressResult.valid);
+
+// Verify SSN
+const ssnResult = await verifier.ssn.verify({
+  ssn: '123-45-6789',
+  firstName: 'John',
+  lastName: 'Doe',
+  dob: '1990-01-01'
+});
+console.log('SSN valid:', ssnResult.valid);</code></pre>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Start Verifying Identities Today</h2>
+                <p>Join thousands of businesses using our verification services</p>
+                <a href="customer-portal.html" class="btn btn-primary btn-large">
+                    <i class="fas fa-arrow-right"></i> Get Started
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2024 Fliplug. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

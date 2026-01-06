@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Portal - Fliplug</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="icon" type="image/svg+xml" href="logo.svg">
+    <link rel="apple-touch-icon" href="favicon.png">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <a href="index.html">
+                    <img src="logo.svg" alt="Fliplug" class="logo-img">
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="customer-portal.html" class="active">Customer Portal</a></li>
+                <li><a href="fraud-detection.html">Fraud Detection</a></li>
+                <li><a href="payment-gateway.html">Payment Gateway</a></li>
+                <li><a href="identity-verification.html">Identity Verification</a></li>
+                <li><a href="#" class="btn-primary">Logout</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Portal Header -->
+    <section class="portal-header">
+        <div class="container">
+            <h1>Customer Portal</h1>
+            <p>Manage your account, services, and transactions</p>
+        </div>
+    </section>
+
+    <!-- Dashboard -->
+    <section class="dashboard">
+        <div class="container">
+            <div class="dashboard-grid">
+                <!-- Sidebar -->
+                <aside class="dashboard-sidebar">
+                    <div class="sidebar-menu">
+                        <a href="#" class="sidebar-item active" data-section="overview">
+                            <i class="fas fa-chart-line"></i>
+                            <span>Overview</span>
+                        </a>
+                        <a href="#" class="sidebar-item" data-section="transactions">
+                            <i class="fas fa-exchange-alt"></i>
+                            <span>Transactions</span>
+                        </a>
+                        <a href="#" class="sidebar-item" data-section="verifications">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Verifications</span>
+                        </a>
+                        <a href="#" class="sidebar-item" data-section="payments">
+                            <i class="fas fa-credit-card"></i>
+                            <span>Payments</span>
+                        </a>
+                        <a href="#" class="sidebar-item" data-section="settings">
+                            <i class="fas fa-cog"></i>
+                            <span>Settings</span>
+                        </a>
+                        <a href="#" class="sidebar-item" data-section="api-keys">
+                            <i class="fas fa-key"></i>
+                            <span>API Keys</span>
+                        </a>
+                    </div>
+                </aside>
+
+                <!-- Main Content -->
+                <main class="dashboard-content">
+                    <!-- Overview Section -->
+                    <div class="dashboard-section active" id="overview">
+                        <div class="section-header">
+                            <h2>Dashboard Overview</h2>
+                            <p>Welcome back! Here's what's happening with your account.</p>
+                        </div>
+                        <div class="stats-grid">
+                            <div class="stat-card">
+                                <div class="stat-icon blue">
+                                    <i class="fas fa-dollar-sign"></i>
+                                </div>
+                                <div class="stat-info">
+                                    <div class="stat-value">$24,567</div>
+                                    <div class="stat-label">Total Revenue</div>
+                                    <div class="stat-change positive">+12.5% from last month</div>
+                                </div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-icon green">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <div class="stat-info">
+                                    <div class="stat-value">1,234</div>
+                                    <div class="stat-label">Verifications</div>
+                                    <div class="stat-change positive">+8.2% from last month</div>
+                                </div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-icon orange">
+                                    <i class="fas fa-credit-card"></i>
+                                </div>
+                                <div class="stat-info">
+                                    <div class="stat-value">567</div>
+                                    <div class="stat-label">Transactions</div>
+                                    <div class="stat-change positive">+5.1% from last month</div>
+                                </div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-icon red">
+                                    <i class="fas fa-shield-alt"></i>
+                                </div>
+                                <div class="stat-info">
+                                    <div class="stat-value">23</div>
+                                    <div class="stat-label">Fraud Detected</div>
+                                    <div class="stat-change negative">-3.2% from last month</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="recent-activity">
+                            <h3>Recent Activity</h3>
+                            <div class="activity-list">
+                                <div class="activity-item">
+                                    <div class="activity-icon success">
+                                        <i class="fas fa-check"></i>
+                                    </div>
+                                    <div class="activity-content">
+                                        <div class="activity-title">Email verification completed</div>
+                                        <div class="activity-time">2 minutes ago</div>
+                                    </div>
+                                </div>
+                                <div class="activity-item">
+                                    <div class="activity-icon info">
+                                        <i class="fas fa-info"></i>
+                                    </div>
+                                    <div class="activity-content">
+                                        <div class="activity-title">Payment processed successfully</div>
+                                        <div class="activity-time">15 minutes ago</div>
+                                    </div>
+                                </div>
+                                <div class="activity-item">
+                                    <div class="activity-icon warning">
+                                        <i class="fas fa-exclamation"></i>
+                                    </div>
+                                    <div class="activity-content">
+                                        <div class="activity-title">Fraud detection alert triggered</div>
+                                        <div class="activity-time">1 hour ago</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Transactions Section -->
+                    <div class="dashboard-section" id="transactions">
+                        <div class="section-header">
+                            <h2>Transactions</h2>
+                            <div class="section-actions">
+                                <button class="btn btn-secondary">
+                                    <i class="fas fa-download"></i> Export
+                                </button>
+                                <button class="btn btn-primary">
+                                    <i class="fas fa-plus"></i> New Transaction
+                                </button>
+                            </div>
+                        </div>
+                        <div class="table-container">
+                            <table class="data-table">
+                                <thead>
+                                    <tr>
+                                        <th>Transaction ID</th>
+                                        <th>Date</th>
+                                        <th>Amount</th>
+                                        <th>Status</th>
+                                        <th>Type</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>#TXN-2024-001</td>
+                                        <td>2024-01-15</td>
+                                        <td>$1,250.00</td>
+                                        <td><span class="badge success">Completed</span></td>
+                                        <td>Payment</td>
+                                        <td><a href="#" class="action-link">View</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>#TXN-2024-002</td>
+                                        <td>2024-01-14</td>
+                                        <td>$850.00</td>
+                                        <td><span class="badge success">Completed</span></td>
+                                        <td>Payment</td>
+                                        <td><a href="#" class="action-link">View</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>#TXN-2024-003</td>
+                                        <td>2024-01-14</td>
+                                        <td>$2,100.00</td>
+                                        <td><span class="badge pending">Pending</span></td>
+                                        <td>Payment</td>
+                                        <td><a href="#" class="action-link">View</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>#TXN-2024-004</td>
+                                        <td>2024-01-13</td>
+                                        <td>$500.00</td>
+                                        <td><span class="badge failed">Failed</span></td>
+                                        <td>Payment</td>
+                                        <td><a href="#" class="action-link">View</a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- Verifications Section -->
+                    <div class="dashboard-section" id="verifications">
+                        <div class="section-header">
+                            <h2>Identity Verifications</h2>
+                            <button class="btn btn-primary">
+                                <i class="fas fa-plus"></i> New Verification
+                            </button>
+                        </div>
+                        <div class="verification-types">
+                            <div class="verification-card">
+                                <div class="verification-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <h3>Email Verification</h3>
+                                <p>Verify email addresses in real-time</p>
+                                <div class="verification-stats">
+                                    <span>1,234 verified</span>
+                                </div>
+                                <button class="btn btn-primary btn-small">Verify Now</button>
+                            </div>
+                            <div class="verification-card">
+                                <div class="verification-icon">
+                                    <i class="fas fa-phone"></i>
+                                </div>
+                                <h3>Phone Verification</h3>
+                                <p>Validate phone numbers instantly</p>
+                                <div class="verification-stats">
+                                    <span>856 verified</span>
+                                </div>
+                                <button class="btn btn-primary btn-small">Verify Now</button>
+                            </div>
+                            <div class="verification-card">
+                                <div class="verification-icon">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <h3>Address Verification</h3>
+                                <p>Confirm address validity and format</p>
+                                <div class="verification-stats">
+                                    <span>642 verified</span>
+                                </div>
+                                <button class="btn btn-primary btn-small">Verify Now</button>
+                            </div>
+                            <div class="verification-card">
+                                <div class="verification-icon">
+                                    <i class="fas fa-id-card"></i>
+                                </div>
+                                <h3>SSN Verification</h3>
+                                <p>Secure SSN validation service</p>
+                                <div class="verification-stats">
+                                    <span>423 verified</span>
+                                </div>
+                                <button class="btn btn-primary btn-small">Verify Now</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Payments Section -->
+                    <div class="dashboard-section" id="payments">
+                        <div class="section-header">
+                            <h2>Payment Methods</h2>
+                            <button class="btn btn-primary">
+                                <i class="fas fa-plus"></i> Add Payment Method
+                            </button>
+                        </div>
+                        <div class="payment-methods">
+                            <div class="payment-card">
+                                <div class="payment-card-header">
+                                    <i class="fas fa-credit-card"></i>
+                                    <span class="payment-type">Credit Card</span>
+                                </div>
+                                <div class="payment-card-number">**** **** **** 4242</div>
+                                <div class="payment-card-expiry">Expires 12/2025</div>
+                                <div class="payment-card-actions">
+                                    <button class="btn btn-secondary btn-small">Edit</button>
+                                    <button class="btn btn-danger btn-small">Remove</button>
+                                </div>
+                            </div>
+                            <div class="payment-card">
+                                <div class="payment-card-header">
+                                    <i class="fab fa-paypal"></i>
+                                    <span class="payment-type">PayPal</span>
+                                </div>
+                                <div class="payment-card-number">user@example.com</div>
+                                <div class="payment-card-expiry">Connected</div>
+                                <div class="payment-card-actions">
+                                    <button class="btn btn-secondary btn-small">Edit</button>
+                                    <button class="btn btn-danger btn-small">Remove</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Settings Section -->
+                    <div class="dashboard-section" id="settings">
+                        <div class="section-header">
+                            <h2>Account Settings</h2>
+                        </div>
+                        <div class="settings-form">
+                            <div class="form-group">
+                                <label>Company Name</label>
+                                <input type="text" value="Acme Corporation" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label>Email Address</label>
+                                <input type="email" value="admin@acme.com" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label>Phone Number</label>
+                                <input type="tel" value="+1 (555) 123-4567" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label>Timezone</label>
+                                <select class="form-control">
+                                    <option>UTC-5 (Eastern Time)</option>
+                                    <option>UTC-6 (Central Time)</option>
+                                    <option>UTC-7 (Mountain Time)</option>
+                                    <option>UTC-8 (Pacific Time)</option>
+                                </select>
+                            </div>
+                            <button class="btn btn-primary">Save Changes</button>
+                        </div>
+                    </div>
+
+                    <!-- API Keys Section -->
+                    <div class="dashboard-section" id="api-keys">
+                        <div class="section-header">
+                            <h2>API Keys</h2>
+                            <button class="btn btn-primary">
+                                <i class="fas fa-plus"></i> Generate New Key
+                            </button>
+                        </div>
+                        <div class="api-keys-list">
+                            <div class="api-key-item">
+                                <div class="api-key-info">
+                                    <div class="api-key-name">Production Key</div>
+                                    <div class="api-key-value">pk_live_51H3k9j2K4mN5pQ6rS7tU8vW9xY0z</div>
+                                    <div class="api-key-date">Created: Jan 1, 2024</div>
+                                </div>
+                                <div class="api-key-actions">
+                                    <button class="btn btn-secondary btn-small">
+                                        <i class="fas fa-copy"></i> Copy
+                                    </button>
+                                    <button class="btn btn-danger btn-small">
+                                        <i class="fas fa-trash"></i> Revoke
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="api-key-item">
+                                <div class="api-key-info">
+                                    <div class="api-key-name">Test Key</div>
+                                    <div class="api-key-value">pk_test_51H3k9j2K4mN5pQ6rS7tU8vW9xY0z</div>
+                                    <div class="api-key-date">Created: Jan 1, 2024</div>
+                                </div>
+                                <div class="api-key-actions">
+                                    <button class="btn btn-secondary btn-small">
+                                        <i class="fas fa-copy"></i> Copy
+                                    </button>
+                                    <button class="btn btn-danger btn-small">
+                                        <i class="fas fa-trash"></i> Revoke
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2024 Fliplug. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
