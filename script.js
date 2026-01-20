@@ -10,6 +10,16 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    // Dynamic footer copyright with current date & time
+    const footerCopyright =
+        document.querySelector('.footer-bottom p');
+    if (footerCopyright) {
+        const now = new Date();
+        const formatted = now.getFullYear();
+        footerCopyright.textContent =
+            `© ${formatted} Fliplug. All rights reserved.`;
+    }
+
     // Dashboard Sidebar Navigation
     const sidebarItems = document.querySelectorAll('.sidebar-item');
     const dashboardSections = document.querySelectorAll('.dashboard-section');
